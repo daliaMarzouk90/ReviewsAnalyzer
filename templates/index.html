@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Tone Analyzer</title>
+  </head>
+  <body>
+    </div>
+        <select name="hotel" id="hotels">
+            {%for hotel in hotels%}
+                <option value="{{hotel}}">{{hotel}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button onclick="GetHotelReviewsTones()">Get Hotel Reviews</button>
+    <button onclick="IndexHotel()">Index Hotel</button>
+    <button onclick="IndexAll()">Index Hotel</button>
+    <div class="HotelReviews"></div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<label id="Reviews">
+    <table>
+        <tr>
+          <th>user</th>
+          <th>review</th>
+          <th>tone</th>
+        </tr>
+        {% for review in reviews %}
+            <tr>
+                <th>{{review["user"]}}</th>
+                <th>{{review["review"]}}</th>
+                <th>{{review["tone"]}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+</label>
